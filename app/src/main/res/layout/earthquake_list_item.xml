@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Creating an Custom ArrayAdapter
+Step 1: Create a xml file to display the content of each list according to your UI
+-->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="16dp"
+    >
+    <!--
+    tools:text: shows text in preview pane but nt when we run th app
+    (import tools xmlns:tools="http://schemas.android.com/tools"
+    -->
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/magnitude"
+        tools:text="7.9"
+        android:layout_weight="1"
+        android:width="0dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="San Francisco"
+        android:id="@+id/location"
+        android:layout_weight="1"
+        android:width="0dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/date"
+        tools:text="Feb 2, 2016"
+        android:layout_weight="1"
+        android:width="0dp"/>
+
+
+</LinearLayout>
