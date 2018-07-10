@@ -12,13 +12,21 @@ public class Earthquake {
 
     private String mLocation;
 
-    private String mDate;
+    /** Time of the earthquake */
+    private long mTimeInMilliseconds;
 
-    //Create a constructor to initialise the variables when called
-    public Earthquake(String magnitude, String location, String date) {
+    /**
+     * Constructs a new {@link Earthquake} object.
+     *
+     * @param magnitude is the magnitude (size) of the earthquake
+     * @param location is the city location of the earthquake
+     * @param timeInMilliseconds is the time in milliseconds (from the Epoch) when the
+     *  earthquake happened
+     */
+    public Earthquake(String magnitude, String location, long timeInMilliseconds) {
         mMagnitude = magnitude;
         mLocation = location;
-        mDate = date;
+        mTimeInMilliseconds = timeInMilliseconds;
     }
 
     //Getters methods to access the private variables from another classes
@@ -30,7 +38,10 @@ public class Earthquake {
         return mLocation;
     }
 
-    public String getmDate() {
-        return mDate;
+    /**
+     * Returns the time of the earthquake.
+     */
+    public long getTimeInMilliseconds() {
+        return mTimeInMilliseconds;
     }
 }

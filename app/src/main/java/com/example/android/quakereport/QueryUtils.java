@@ -66,15 +66,11 @@ public final class QueryUtils {
 
                 String magnitude = String.valueOf(properties.optDouble("mag"));
                 String location = properties.optString("place").toString();
-                Long date = properties.optLong("time");
 
-                long timeInMilliseconds = date;
-                Date dateObject = new Date(timeInMilliseconds);
+                Long time = properties.optLong("time");
 
-                SimpleDateFormat dateFormatter = new SimpleDateFormat("MMM DD, yyyy");
-                String dateToDisplay = dateFormatter.format(dateObject);
 
-                earthquakes.add(new Earthquake(magnitude,location,dateToDisplay));
+                earthquakes.add(new Earthquake(magnitude,location,time));
 
             }
 
