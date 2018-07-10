@@ -23,17 +23,7 @@ public class EarthquakeActivity extends AppCompatActivity {
          * Creates a constructors and getters methods to access private variables declared
          */
 
-        // Create a fake list of earthquake locations.
-
-        //Create a new Earthquake objects and using constructor declared add values into the Object
-        ArrayList<Earthquake> earthquakes = new ArrayList<>();
-        earthquakes.add(new Earthquake("7.9","San Francisco","27-02-2016"));
-        earthquakes.add(new Earthquake("6.6","London","27-02-2016"));
-        earthquakes.add(new Earthquake("7.9","Tokyo","27-02-2016"));
-        earthquakes.add(new Earthquake("7.9","Mexico City","27-02-2016"));
-        earthquakes.add(new Earthquake("7.9","Moscow","27-02-2016"));
-        earthquakes.add(new Earthquake("7.9","Rio de Janeirio","27-02-2016"));
-        earthquakes.add(new Earthquake("7.9","Paris","27-02-2016"));
+        ArrayList<Earthquake> earthquakes = QueryUtils.extractEarthquakes();
 
         // Find a reference to the {@link ListView} in the layout
         ListView earthquakeListView = (ListView) findViewById(R.id.list);
