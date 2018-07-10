@@ -12,6 +12,9 @@ public class Earthquake {
 
     private String mLocation;
 
+    /** Website URL of the earthquake */
+    private String mUrl;
+
     /** Time of the earthquake */
     private long mTimeInMilliseconds;
 
