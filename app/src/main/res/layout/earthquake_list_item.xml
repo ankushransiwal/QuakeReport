@@ -25,12 +25,19 @@ Step 1: Create a xml file to display the content of each list according to your 
         android:width="0dp"/>
 
     <TextView
-        android:layout_width="wrap_content"
+        android:id="@+id/location_offset"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        tools:text="San Francisco"
-        android:id="@+id/location"
         android:layout_weight="1"
-        android:width="0dp"/>
+        tools:text="30km S of" />
+
+    <TextView
+        android:id="@+id/primary_location"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        tools:text="San Francisco, CA" />
+
 
     <TextView
         android:id="@+id/date"
