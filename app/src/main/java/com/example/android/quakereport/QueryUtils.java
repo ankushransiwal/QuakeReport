@@ -60,9 +60,9 @@ public final class QueryUtils {
 
             //Iterate the jsonArray and print the info of JSONObjects
             for(int i=0; i < features.length(); i++){
-                JSONObject earthquake = features.getJSONObject(i);
+                JSONObject earthquakeJson = features.getJSONObject(i);
 
-                JSONObject properties = earthquake.getJSONObject("properties");
+                JSONObject properties = earthquakeJson.getJSONObject("properties");
 
                 // Extract the value for the key called "mag"
                 double magnitude = properties.getDouble("mag");
@@ -71,8 +71,12 @@ public final class QueryUtils {
 
                 Long time = properties.optLong("time");
 
+                // Extract the value for the key called "url"
+                String url = properties.getString("url");
 
-                earthquakes.add(new Earthquake(magnitude,location,time));
+                // Create a new {@link Earthquake} object with the magnitude, location, time,
+                // and url from the JSON response.
+                earthquakes.add(new Earthquake(magnitude,location,time,url));
 
             }
 

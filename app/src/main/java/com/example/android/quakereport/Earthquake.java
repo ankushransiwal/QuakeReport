@@ -26,10 +26,11 @@ public class Earthquake {
      * @param timeInMilliseconds is the time in milliseconds (from the Epoch) when the
      *  earthquake happened
      */
-    public Earthquake(Double magnitude, String location, long timeInMilliseconds) {
+    public Earthquake(Double magnitude, String location, long timeInMilliseconds, String url) {
         mMagnitude = magnitude;
         mLocation = location;
         mTimeInMilliseconds = timeInMilliseconds;
+        mUrl = url;
     }
 
     //Getters methods to access the private variables from another classes
@@ -46,5 +47,9 @@ public class Earthquake {
      */
     public long getTimeInMilliseconds() {
         return mTimeInMilliseconds;
+    }
+
+    public String getUrl() {
+        return mUrl;
     }
 }
