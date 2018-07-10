@@ -8,7 +8,7 @@ package com.example.android.quakereport;
 public class Earthquake {
 
     //Create private variables of the elements in each list item
-    private String mMagnitude;
+    private Double mMagnitude;
 
     private String mLocation;
 
@@ -23,14 +23,14 @@ public class Earthquake {
      * @param timeInMilliseconds is the time in milliseconds (from the Epoch) when the
      *  earthquake happened
      */
-    public Earthquake(String magnitude, String location, long timeInMilliseconds) {
+    public Earthquake(Double magnitude, String location, long timeInMilliseconds) {
         mMagnitude = magnitude;
         mLocation = location;
         mTimeInMilliseconds = timeInMilliseconds;
     }
 
     //Getters methods to access the private variables from another classes
-    public String getmMagnitude() {
+    public Double getmMagnitude() {
         return mMagnitude;
     }
 
