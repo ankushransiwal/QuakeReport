@@ -119,7 +119,8 @@ public class EarthquakeActivity extends AppCompatActivity implements LoaderCallb
         // data set. This will trigger the ListView to update.
         if (earthquakes != null && !earthquakes.isEmpty()) {
             //Comment out this code to show the EmptyStateTextView msg
-            mAdapter.addAll(earthquakes);
+            //Pretend Like no views came back after waiting for some time and move to Empty state
+            //mAdapter.addAll(earthquakes);
         }
 
         // Set empty state text to display "No earthquakes found."
